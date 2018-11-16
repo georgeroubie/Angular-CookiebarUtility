@@ -1,2 +1,3 @@
-# Angular-CookiebarUtility
-jQuery free Angular Cookiebar Utility
+# Description
+
+This is a jQuery free Angular Cookiebar Utility
