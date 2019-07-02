@@ -6,10 +6,10 @@ export class CookiebarUtility {
     private cookieEntry = 'cb-enabled={value}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
     private message: string = 'WE USE COOKIES TO TRACK USAGE AND PREFERENCES';
     private acceptText: string = 'I UNDERSTAND';
-    private acceptButton: string = `<a href="" class="cb-enable waves-effect waves-light btn">${this.acceptText}</a>`;
+    private acceptButton: string = `<a href="" class="cb-enable">${this.acceptText}</a>`;
     private policyText: string = 'READ MORE';
     private policyURL: string = 'https://www.website.com/security-and-privacy-policy';
-    private policyButton: string = `<a href="${this.policyURL}" class="cb-policy waves-effect waves-light btn" target="_blank">${this.policyText}</a>`;
+    private policyButton: string = `<a href="${this.policyURL}" class="cb-policy" target="_blank">${this.policyText}</a>`;
 
     constructor() {
         this.policyButton = ''; // Comment this line if you want to show the policy button
