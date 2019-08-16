@@ -1,17 +1,26 @@
 #cookie-bar {
 	user-select: none;
-    height: auto;
-    line-height: 50px;
-    text-align: center;
-    transition: all 1s;
+	transition: all 1s;
 	position: fixed;
 	z-index: 2147483647;
 	left: 0;
-	width: 100%;
 	bottom: 0;
-	top: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: .5rem;
+
+	@include media-breakpoint-only(xs) {
+		flex-direction: column;
+	}
+
+	@include media-breakpoint-only(sm) {
+		flex-direction: column;
+	}
+
 	.btn {
-		margin-left: 0.5rem;
+		margin: .5rem;
 		padding: 0 #{$grid-gutter-width/2};
 		display: inline-block;
 	}
