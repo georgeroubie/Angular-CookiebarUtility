@@ -31,7 +31,7 @@ export class CookiebarUtility {
 
 	private createCookieBar(): void {
 		const cookieBar = document.createElement('div');
-		cookieBar.id = 'cookie-bar';
+		cookieBar.id = 'cookie_bar';
 		cookieBar.className = 'bg-dark text-white';
 		cookieBar.innerHTML = this.message + this.acceptButton + this.policyButton;
 		document.body.appendChild(cookieBar);
