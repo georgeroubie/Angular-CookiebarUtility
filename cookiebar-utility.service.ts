@@ -42,7 +42,7 @@ export class CookiebarUtility {
 			event.preventDefault();
 			document.cookie = this.cookieEntry.replace('{value}', 'accepted');
 			const cookieBar: any = document.querySelector('#cookie-bar');
-			cookieBar.style['bottom'] = '-100px';
+			cookieBar.style['bottom'] = `-${cookieBar.clientHeight}px`;
 			setTimeout(() => cookieBar.parentNode.removeChild(cookieBar), 2000);
 		});
 	}
