@@ -38,10 +38,10 @@ export class CookiebarUtility {
 	}
 
 	private acceptCookiesEvent(): void {
-		document.querySelector('#cookie-bar .cb-enable').addEventListener('click', (event) => {
+		document.querySelector('#cookie_bar .cb-enable').addEventListener('click', (event) => {
 			event.preventDefault();
 			document.cookie = this.cookieEntry.replace('{value}', 'accepted');
-			const cookieBar: any = document.querySelector('#cookie-bar');
+			const cookieBar: any = document.querySelector('#cookie_bar');
 			cookieBar.style['bottom'] = `-${cookieBar.clientHeight}px`;
 			setTimeout(() => cookieBar.parentNode.removeChild(cookieBar), 2000);
 		});
