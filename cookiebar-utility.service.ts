@@ -21,9 +21,9 @@ export class CookiebarUtility {
 	private retrieveCurrentCookiePreference(): string {
 		const cookies: string[] = document.cookie.split('; ');
 		let cookieValue: string = '';
-		for (let i = 0; i < cookies.length; i++) {
-			if (cookies[i].split('=')[0] === 'cb-enabled') {
-				cookieValue = cookies[i].split('=')[1];
+		for (const cookie of cookies) {
+			if (cookie.split('=')[0] === 'cb-enabled') {
+				cookieValue = cookie.split('=')[1];
 			}
 		}
 		return cookieValue;
@@ -42,7 +42,7 @@ export class CookiebarUtility {
 			event.preventDefault();
 			document.cookie = this.cookieEntry.replace('{value}', 'accepted');
 			const cookieBar: any = document.querySelector('#cookie_bar');
-			cookieBar.style['bottom'] = `-${cookieBar.clientHeight}px`;
+			cookieBar.style.bottom = `-${cookieBar.clientHeight}px`;
 			setTimeout(() => cookieBar.parentNode.removeChild(cookieBar), 2000);
 		});
 	}
